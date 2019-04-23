@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.xlx.dao.MessageMapper" >
+  <resultMap id="BaseResultMap" type="com.xlx.entity.Message" >
+    <result column="id" property="id" jdbcType="INTEGER" />
+    <result column="phone" property="phone" jdbcType="DECIMAL" />
+    <result column="location" property="location" jdbcType="VARCHAR" />
+    <result column="province" property="province" jdbcType="VARCHAR" />
+    <result column="city" property="city" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="last_time" property="lastTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <insert id="insert" parameterType="com.xlx.entity.Message" >
+    insert into message (id, phone, location, 
+      province, city, create_time, 
+      last_time)
+    values (#{id,jdbcType=INTEGER}, #{phone,jdbcType=DECIMAL}, #{location,jdbcType=VARCHAR}, 
+      #{province,jdbcType=VARCHAR}, #{city,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, 
+      #{lastTime,jdbcType=TIMESTAMP})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select id, phone, location, province, city, create_time, last_time
+    from message
+  </select>
+</mapper>

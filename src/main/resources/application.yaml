@@ -1,0 +1,29 @@
+spring:
+    datasource:
+        driver-class-name: com.mysql.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/finalprogram
+        username: root
+        password: root
+        type: org.apache.commons.dbcp.BasicDataSource
+    mvc:
+        view:
+            prefix: /
+            suffix: .jsp
+    http:
+        multipart:
+            max-file-size: 20971520
+            max-request-size: 20971520
+mybatis:
+    mapper-locations: classpath:/com/xlx/mapper/*.xml
+    type-aliases-package: com.xlx.entity
+pagehelper:
+    helperDialect: mysql
+    reasonable: true
+    supportMethodsArguments: true
+    params: count=countSql
+server:
+    context-path: /finalprogram
+    port: 9898
+    jsp-servlet:
+        init-parameters:
+            development: true
