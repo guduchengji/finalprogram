@@ -10,16 +10,5 @@
     <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
     <result column="last_time" property="lastTime" jdbcType="TIMESTAMP" />
   </resultMap>
-  <insert id="insert" parameterType="com.xlx.entity.Message" >
-    insert into message (id, phone, location, 
-      province, city, create_time, 
-      last_time)
-    values (#{id,jdbcType=INTEGER}, #{phone,jdbcType=DECIMAL}, #{location,jdbcType=VARCHAR}, 
-      #{province,jdbcType=VARCHAR}, #{city,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, 
-      #{lastTime,jdbcType=TIMESTAMP})
-  </insert>
-  <select id="selectAll" resultMap="BaseResultMap" >
-    select id, phone, location, province, city, create_time, last_time
-    from message
-  </select>
+
 </mapper>

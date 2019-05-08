@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Final Design Program</title>
+  <title>xlx's Final Design Program</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
@@ -35,7 +35,7 @@
     <div class="container">
 
       <div id="logo" class="pull-left">
-        <a href="#hero"><img src="img/logo4.png" style="height: 32px;width: 126px" alt="" title="" /></img></a>
+        <a href="#hero"><img src="img/logo4.png" style="height: 32px;width: 126px" alt="" title="" /></a>
         <!-- Uncomment below if you prefer to use a text logo -->
         <!--<h1><a href="#hero">Regna</a></h1>-->
       </div>

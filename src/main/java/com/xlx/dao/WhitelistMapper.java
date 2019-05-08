@@ -1,16 +1,10 @@
 package com.xlx.dao;
 
 import com.xlx.entity.Whitelist;
+import tk.mybatis.mapper.common.Mapper;
+
 import java.util.List;
 
-public interface WhitelistMapper {
-    int deleteByPrimaryKey(Long id);
+public interface WhitelistMapper extends Mapper<Whitelist> {
 
-    int insert(Whitelist record);
-
-    Whitelist selectByPrimaryKey(Long id);
-
-    List<Whitelist> selectAll();
-
-    int updateByPrimaryKey(Whitelist record);
 }

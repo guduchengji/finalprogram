@@ -8,31 +8,5 @@
     <result column="last_time" property="lastTime" jdbcType="TIMESTAMP" />
     <result column="location" property="location" jdbcType="VARCHAR" />
   </resultMap>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
-    delete from blacklist
-    where id = #{id,jdbcType=DECIMAL}
-  </delete>
-  <insert id="insert" parameterType="com.xlx.entity.Blacklist" >
-    insert into blacklist (id, phone, create_time, 
-      last_time, location)
-    values (#{id,jdbcType=DECIMAL}, #{phone,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, 
-      #{lastTime,jdbcType=TIMESTAMP}, #{location,jdbcType=VARCHAR})
-  </insert>
-  <update id="updateByPrimaryKey" parameterType="com.xlx.entity.Blacklist" >
-    update blacklist
-    set phone = #{phone,jdbcType=VARCHAR},
-      create_time = #{createTime,jdbcType=TIMESTAMP},
-      last_time = #{lastTime,jdbcType=TIMESTAMP},
-      location = #{location,jdbcType=VARCHAR}
-    where id = #{id,jdbcType=DECIMAL}
-  </update>
-  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
-    select id, phone, create_time, last_time, location
-    from blacklist
-    where id = #{id,jdbcType=DECIMAL}
-  </select>
-  <select id="selectAll" resultMap="BaseResultMap" >
-    select id, phone, create_time, last_time, location
-    from blacklist
-  </select>
+
 </mapper>
