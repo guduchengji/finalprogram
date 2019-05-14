@@ -22,5 +22,5 @@ public class Blacklist {
     private Date lastTime;
 
     private String location;
-
+    private Long weights;
 }

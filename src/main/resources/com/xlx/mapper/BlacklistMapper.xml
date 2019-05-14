@@ -7,6 +7,9 @@
     <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
     <result column="last_time" property="lastTime" jdbcType="TIMESTAMP" />
     <result column="location" property="location" jdbcType="VARCHAR" />
+    <result column="weights" property="weights" jdbcType="DECIMAL" />
   </resultMap>
-
+    <select id="queryByPhone" parameterType="java.lang.String" resultType="com.xlx.entity.Blacklist">
+      select id,phone,create_time,last_time,location,weights from blacklist where phone={#phone};
+    </select>
 </mapper>
